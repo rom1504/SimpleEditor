@@ -177,7 +177,7 @@ void MainWindow::openFile(QString fileName)
     file.open(QIODevice::ReadOnly);
     QTextStream textStream(&file);
     QString content="";
-    textStream>>content;
+    content=textStream.readAll();
     textEdit->setPlainText(content);
     textEdit->document()->setModified(false);
     int index=ui->tabWidget->addTab(textEdit,veryReducedFileName(fileName));
