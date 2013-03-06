@@ -1,7 +1,7 @@
 #SimpleEditor
 Simple Editor made with Qt
 
-#Installation
+##Installation
 * qmake
 * make
 * ./SimpleEditor
