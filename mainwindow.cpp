@@ -170,7 +170,7 @@ void MainWindow::openFile(QString fileName)
             return;
         }
     }
-    if(currentTextEdit()->windowFilePath()=="" && !(currentTextEdit()->document()->isModified()) && ui->tabWidget->count()==1) on_actionFermer_triggered();
+    if(currentTextEdit() && currentTextEdit()->windowFilePath()=="" && !(currentTextEdit()->document()->isModified()) && ui->tabWidget->count()==1) on_actionFermer_triggered();
     QTextEdit* textEdit=new QTextEdit();
     textEdit->setWindowFilePath(fileName);
     QFile file(fileName);
